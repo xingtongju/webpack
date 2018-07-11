@@ -5,8 +5,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     mode: 'production',
-    //   mode:'development',
-    //devtool: 'eval-source-map',
     entry: __dirname + '/app/main.js',//已多次提及的唯一入口文件
     output: {
         path: __dirname + '/build',//打包后的文件存放的地方
@@ -24,8 +22,6 @@ module.exports = {
                 test: /(\.jsx|\.js)$/,
                 use: {
                     loader: 'babel-loader'
-                    //     presets: ["env", "react" ]//env 解析ES6; react解析react JSX
-                    // }
                 },
                 exclude: /node_modules/
             },
